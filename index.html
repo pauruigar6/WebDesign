@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seville Website</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://www.youtube.com/iframe_api"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <a href="index.html">
+          <img class="logo" src="assets/logo.png" alt="Seville Logo" />
+        </a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li class="sub-menu">
+              <a href="html/news.html">NEWS & EVENTS</a>
+              <ul>
+                <li><a href="html/news.html">News</a></li>
+                <li><a href="html/events.html">Events</a></li>
+                <li><a href="html/calendar.html">Calendar</a></li>
+              </ul>
+            </li>
+            <li class="sub-menu">
+              <a href="html/history.html">HISTORY & CULTURE</a>
+              <ul>
+                <li><a href="html/history.html">City History</a></li>
+                <li><a href="html/figures.html">Famous Figures</a></li>
+              </ul>
+            </li>
+            <li class="sub-menu">
+              <a href="html/landmarks.html">SIGHTSEEING</a>
+              <ul>
+                <li><a href="html/landmarks.html">Historic Landmarks</a></li>
+                <li><a href="html/natural.html">Natural Beauty</a></li>
+                <li><a href="html/attractions.html">Local Attractions</a></li>
+              </ul>
+            </li>
+            <li class="sub-menu">
+              <a href="html/accommodation.html">SERVICES</a>
+              <ul>
+                <li><a href="html/accommodation.html">Accommodation</a></li>
+                <li><a href="dining.html">Dining</a></li>
+              </ul>
+            </li>
+            <li><a href="html/contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+      <div class="text-box">
+        <h1 id="seville">Seville</h1>
+        <p>IN ANDALUSIAN EMBRACE, WHERE HISTORY AND RYTHM INTERLACE. <br /></p>
+        <a
+          href="html/news.html"
+          class="hero-btn"
+          >Discover</a
+        >
+        <div id="video-container"></div>
+      </div>
+    </header>
+
+    <footer class="footer" style="margin-top: 0px">
+      <p>&copy; 2023 Seville Website. All rights reserved.</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/menu.js"></script>
+  </body>
+</html>

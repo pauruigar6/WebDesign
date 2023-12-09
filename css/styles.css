@@ -1,0 +1,907 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+/* Style for everything */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Style for Header */
+.header {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(4, 9, 30, 0.7)), url(../assets/home-background.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.logo {
+    max-width: 170px;
+    position: absolute;
+    top: -10px;
+    left: 0px;
+}
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img {
+    width: 150px;
+}
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 20px;
+    position: relative;
+}
+.nav-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #ff0000;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+.nav fa{
+    display: none;
+}
+.sub-menu:hover ul {
+    display: block;
+}
+.sub-menu ul li {
+    display: block;
+    padding: 5px 0;
+    position: relative;
+}
+.sub-menu ul li:hover {
+    background-color: #ff0000;
+}
+.sub-menu ul li a {
+    color: white;
+    text-decoration: none;
+    padding-right: 10px;
+    font-size: 12px;
+}
+.sub-menu ul li::after {
+    background: none;
+}
+.sub-menu ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    background-color: rgba(4, 9, 30, 0.7);
+    width: 150px;
+    padding: 10px;
+}
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.text-box h1 {
+    font-family: 'Abril Fatface', cursive;
+    font-size: 100px;
+    font-weight: lighter;
+}
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 16px;
+    color: #fff;
+    word-spacing: 2px;
+    font-weight: lighter;
+}
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #FF0000;
+    padding: 12px 34px;
+    font-size: 16px;
+    background: transparent;
+    position: relative;
+}
+.hero-btn:hover {
+    border: 1px solid #FF0000;
+    background: #ff0000b4;
+    transition: 1s;
+}
+nav .fa {
+    display: none;
+}
+.footer {
+    margin-top: 50px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.footer p {
+    margin: 0;
+}
+
+
+/* Style for sub-header (screens headers but index) */
+.sub-header {
+    height: 60vh;
+    width: 100%;
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../assets/home-background.jpeg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 80px;
+}
+.sub-header h1{
+    margin-top: 100px;
+    margin-bottom: 40px;
+}
+.sub-header p{
+    font-size: 16px;
+    font-style: normal;
+    color: whitesmoke;
+    word-spacing: 2px;
+    line-height: 1.5;}
+.header-title{
+    font-size: 60px;
+    font-weight: 100;
+}
+.header-text{
+    font-size: 16px;
+}
+
+/* Style for News (also used for History) */
+.news,
+.history{
+    margin: 50px 150px 50px 150px;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    box-sizing: border-box;
+}
+.left-slide {
+    height: 100%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+.left-slide > div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: center;
+    color: #000000;
+}
+.news-title,
+.history-title {
+    font-size: 40px;
+    margin-bottom: 20px;
+    margin-right: 60px;
+}
+.left-slide p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 60px;
+    text-align: justify;
+    letter-spacing: 1,2px;
+    line-height: 1.8;
+}
+.right-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+    transition: transform 0.5s ease-in-out;
+}
+.right-slide > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+.news button,
+.history button {
+    background-color: #fff;
+    border: none;
+    color: #a31717;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
+}
+.news button:hover,
+.history button:hover{
+    color: #222;
+}  
+.news button:focus,
+.history button:focus {
+    outline: none;
+}
+.action-buttons button {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+}  
+.action-buttons .down-button {
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+} 
+.action-buttons .up-button {
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+/* Style for Events (also used for Figures) */
+.events,
+.figures{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.events h1,
+.figures h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+.events p,
+.figures p{
+    color: #777;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.events .row,
+.figures .row{
+    display: flex;
+    justify-content: space-between;
+}
+.events .container,
+.figures .container {
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    height: 500px; 
+}
+.events .container img,
+.figures .container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+.events .layer,
+.figures .layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.events .layer:hover,
+.figures .layer:hover{
+    background: rgba(226,0,0,0.7);
+}
+.events .layer h3,
+.figures .layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px; 
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.events .layer:hover h3,
+.figures .layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+
+/* Style for Calendar */
+.calendar .calendar-header table th.next, 
+.calendar .calendar-header table th.prev {
+    width: 200px;
+}
+.months-container{
+    gap: 40px;
+    justify-content: center;
+}
+.months-container .month-container{
+    background: #fff;
+    border-radius: 5px;
+    min-width: 280px;
+    box-shadow: 15px 15px 40px rgba(0, 0, 0, 0.15);
+}
+.calendar table.month th.month-title {
+    font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.calendar table.month td:first-child,
+.calendar table.month thead tr:nth-child(2) th:first-child{
+    color: crimson;
+}
+.calendar table.month th.day-header{
+    color: rgb(12, 45, 12);
+    font-size: 14px;
+}
+.month tr td{
+    font-size: 14px;
+    font-weight: 500;
+    color: #777;
+}
+table.month td.day .day-content:hover{
+    background: #ff0000b4;
+    color: #fff;
+}
+.calendar .calendar-header{
+    border: none;
+    margin-bottom: 60px;
+}
+.calendar .calendar-header table th:hover{
+    background: transparent;
+}
+.calendar .calendar-header table th span{
+    font-size: 50px;
+    color: #acacac;
+}
+.calendar .calendar-header table th span:hover{
+    color:#fff;
+}
+.calendar .calendar-header .year-title{
+    font-size: 55px;
+    color: black;  
+}
+
+/* Style for Landmarks */
+.landmarks{
+    box-sizing: border-box;
+    align-items: center; 
+    width: 80%;
+    margin: auto;
+}
+.landmarks body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.landmarks .row {
+    margin-bottom: 80px;
+}
+.landmarks .container {
+    display: flex;
+}
+.landmarks .panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 5px;
+    position: relative;
+    -webkit-transition: all 700ms ease-in;
+    transition: all 700ms ease-in;
+}
+.landmarks .panel h3 {
+    font-size: 24px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+ .landmarks .panel.active {
+    flex: 5;
+}
+.landmarks .panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+    font-style: italic;
+}
+
+
+/* Style for Natural */
+.natural{
+    box-sizing: border-box;
+}
+.natural .row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.natural body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+.natural .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.natural .container img {
+    object-fit: cover;
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+    max-width: 100%;
+}
+.natural .appear {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+.natural .appear.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Style for Attractions */
+.attractions{
+    box-sizing: border-box;
+    align-items: center; 
+    width: 80%;
+    margin: auto;
+}
+.attractions body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f1f4fd;
+}
+.attractions .row {
+    margin-bottom: 80px; 
+}
+.attractions .row-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #333; 
+}
+.attractions .container{
+    max-width: 1200px;
+    width: 100%;
+}
+.attractions .slider-wrapper{
+    position: relative;
+}
+
+.attractions .slider-wrapper .image-list{
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 18px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 5px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+.attractions .slider-wrapper .image-list .image-item {
+    border-radius: 4%;
+}
+.attractions .slider-wrapper .image-list .image-item-wrapper {
+  position: relative;
+}
+.attractions .slider-wrapper .image-list .image-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 18px;
+  color: #fff; 
+  padding: 8px; 
+  text-align: center; 
+  
+}
+.attractions .slider-wrapper .image-list::-webkit-scrollbar{
+    display: none;
+}
+.attractions .slider-wrapper .image-list .image-item{
+    width: 325px;
+    height: 400px;
+    object-fit: cover;
+}
+.attractions .container .slider-scrollbar{
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.attractions .slider-scrollbar .scrollbar-track{
+    background: #ccc;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+}
+.attractions .slider-scrollbar:hover .scrollbar-track{
+    height: 4px;
+}
+.attractions .slider-scrollbar .scrollbar-thumb{
+    position: absolute;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+}
+.attractions .slider-scrollbar .scrollbar-thumb:active{
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+}
+.attractions .slider-scrollbar .scrollbar-thumb::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+}
+
+/* Style for Accommodations (also used for Dining) */
+.accommodation,
+.dining {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.accommodation .row,
+.dining .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+}
+.accommodation img,
+.dining img {
+    max-width: 100%;
+}
+.card{
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.385);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 350px;
+    margin: 0 20px;
+}
+.card-header{
+    height: 200px;
+}
+.card-header img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.card-content {
+    background-color: #fff;
+    padding: 30px;
+    text-align: left;
+}
+.card-title {
+    padding-bottom: 10px;
+    font-size: 24px;
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 14px;
+    color: #3c3a3a;
+}
+.rating {
+    color: gold; 
+    font-size: 20px; 
+    padding-top: 20px;
+}
+.price {
+    padding-top: 20px;
+    font-size: 16px; 
+    color: red;
+}
+
+
+/* Style for Contact */
+.contact{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
+}
+.contact:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background: url("img/bg.jpg") no-repeat center;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
+}
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+.contact .left{
+	background: url("../assets/natural-images/natural6-img.jpeg") no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+.contact .right{
+	padding: 25px 40px;
+}
+.contact h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+.contact h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+    background-color:  rgba(255, 0, 0, 0.893);
+}
+.field{
+	width: 100%;
+	border: 2px solid rgba(0, 0, 0, 0);
+	outline: none;
+	background-color: rgba(230, 230, 230, 0.6);
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: .3s;
+}
+.field:hover{
+	background-color: rgba(0, 0, 0, 0.1);
+}
+textarea{
+	min-height: 150px;
+}
+.contact .btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-color: rgba(255, 0, 0, 0.893);
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+.contact .btn:hover{
+    background-color: #ae6a27;
+}
+.field:focus{
+    border: 2px solid rgba(30,85,250,0.47);
+    background-color: #fff;
+}
+
+
+  /* Style for @media */
+  @media screen and (max-width: 880px){
+    /* Style for index */
+    .text-box h1{
+        font-size: 60px;
+    }
+    .text-box p{
+        font-size: 14px;
+        padding: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: rgba(255, 0, 0, 0.893);
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+    .nav-links ul li {
+        display: block;
+        font-size: 12px;
+        padding: 10px;
+        padding-bottom: 20px;
+    }
+    .sub-menu ul {
+        position: static;
+        display: none;
+        width: 100%; 
+        background-color: rgba(4, 9, 30, 0.7);
+        padding: 10px;
+    }
+    .sub-menu ul li {
+        display: block;
+        padding: 10px;
+        background-color: transparent; 
+    }
+    .sub-header {
+        height: 50vh;
+        margin-bottom: 40px;
+    }
+    .header-title{
+        font-size: 40px;
+        font-weight: 100;
+    }
+    .sub-header p{
+        font-size: 12px;
+        margin: 20px;
+    }
+
+    /* Style for news and history */
+    .news, 
+    .history {
+        margin: 0px 50px 0px 50px;
+        height: 400px;
+    }
+    .news-title, 
+    .history-title {
+        font-size: 9px;
+        margin-bottom: 10px;
+        margin-right: 30px;
+    }
+    .left-slide {
+        top: 1600px; 
+        transform: translateY(0px);
+    }
+    .left-slide p {
+        font-size: 7px;
+        margin-bottom: 10px;
+        margin-right: 30px;
+        line-height: 1.2;
+        text-align: start;
+        margin-top: 0;
+    }
+    .news button, .history button {
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    /* Style for events and figures */
+    .row{
+        flex-direction: column;
+    }
+
+    /* Style for calendar */
+    .calendar .calendar-header table th span {
+        font-size: 30px;
+    }
+    .calendar .months-container {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    /* Style for landmarks */
+    .landmarks .panel h3 {
+        font-size: 12px;
+        margin-right: 10px;
+    }
+
+    /* Style for attractions */
+    .attractions .row-title {
+        font-size: 20px;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    .attractions .slider-wrapper .image-list .image-caption {
+        font-size: 12px;
+    }
+    .attractions .slider-wrapper .image-list .image-item {
+        width: 300px;
+        height: 375px;
+    }
+
+    /* Style for accommodation and dining */
+    .accommodation .card, 
+    .dining .card {
+        width: auto;
+        margin: 30px;
+    }
+    .accommodation .row, 
+    .dining .row {
+        margin-bottom: 0px;
+    }
+    .card-title {
+        font-size: 18px;
+    }
+    .info {
+        font-size: 10px;
+    }
+    .rating,
+    .price{
+        font-size: 10px;
+    }
+
+    /* Style for contact */
+    .contact .contact-box{
+		grid-template-columns: 250px;
+	}
+	.contact .left{
+		height: 200px;
+	}
+
+    
+}
+  

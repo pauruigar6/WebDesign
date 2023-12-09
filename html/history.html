@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seville Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./../css/styles.css" />
+  </head>
+
+  <header class="sub-header">
+    <nav>
+      <a href="../index.html">
+        <img class="logo" src="../assets/logo.png" alt="Seville Logo" />
+      </a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="../index.html">HOME</a></li>
+          <li class="sub-menu">
+            <a href="../html/news.html">NEWS & EVENTS</a>
+            <ul>
+              <li><a href="../html/news.html">News</a></li>
+              <li><a href="../html/events.html">Events</a></li>
+              <li><a href="../html/calendar.html">Calendar</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="../html/history.html">HISTORY & CULTURE</a>
+            <ul>
+              <li><a href="../html/history.html">City History</a></li>
+              <li><a href="../html/figures.html">Famous Figures</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="../html/landmarks.html">SIGHTSEEING</a>
+            <ul>
+              <li><a href="../html/landmarks.html">Historic Landmarks</a></li>
+              <li><a href="../html/natural.html">Natural Beauty</a></li>
+              <li><a href="../html/attractions.html">Local Attractions</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="../html/accommodation.html">SERVICES</a>
+            <ul>
+              <li><a href="../html/accommodation.html">Accommodation</a></li>
+              <li><a href="../html/dining.html">Dining</a></li>
+            </ul>
+          </li>
+          <li><a href="../html/contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()"></i>
+    </nav>
+    <h1 class="header-title">City History</h1>
+    <p class="header-text">
+      Explore Sevilla's rich history, from ancient roots to modern allure,
+      <br />
+      revealing the city's enduring charm through the ages.
+    </p>
+  </header>
+
+  <body>
+    <div class="history">
+      <div class="left-slide">
+        <div style="background-color: #fff">
+          <h1 class="history-title">Resurging stronger than ever.</h1>
+          <p>
+            In 1728, the Royal Tobacco Factory was established in Seville,
+            shaping the city's future. By the 20th century, it played a crucial
+            role in national politics and hosted the 1929 Ibero-American
+            Exposition. After the Spanish Civil War, Seville faced tragic events
+            but emerged as the capital of Andalusia. The 1992 Universal
+            Exposition further propelled the city's significance. Today, Seville
+            is a key city in Spain.
+          </p>
+        </div>
+        <div style="background-color: #fff">
+          <h1 class="history-title">Good times for Seville.</h1>
+          <p>
+            Seville, historically invaded by the Almoravids and later the
+            Almohads, reached its zenith under Almohad rule, with notable
+            constructions like the Torre del Oro and the Giralda. In 1248, it
+            was conquered by Fernando III, making it a capital. In the 16th
+            century, significant buildings like the Cathedral were constructed,
+            but it faced economic competition. The plague of 1649 and the
+            Counter-Reformation had a detrimental impact, halving the
+            population. In 1717, the Casa de Contratación relocated, signaling
+            the loss of economic and political importance for Seville.
+          </p>
+        </div>
+        <div style="background-color: #fff">
+          <h1 class="history-title">The origins of the city.</h1>
+          <p>
+            Seville's origins are shrouded in legends, with theories linking it
+            to Tharsis and attributing its foundation to Hercules. The city,
+            originally named "Spal" by the Turdetani tribe, evolved through
+            Phoenician, Greek, and Carthaginian influences. Roman rule began in
+            205 B.C., transforming it into "Iulia Romuela." After a Visigothic
+            period marked by internal strife, Seville became a cultural hub with
+            Saints Leander and Isidore. In 712, it fell to the Muslims, adopting
+            the name Isbiliyya. Following the Cordoban Caliphate's decline,
+            Seville became a taifa kingdom under the Banu Abbad dynasty.
+          </p>
+        </div>
+      </div>
+      <div class="right-slide">
+        <div
+          style="
+            background-image: url('./../assets/history-images/history1-img.jpeg');
+          "
+        ></div>
+        <div
+          style="
+            background-image: url('./../assets/history-images/history2-img.jpeg');
+          "
+        ></div>
+        <div
+          style="
+            background-image: url('./../assets/history-images/history3-img.jpeg');
+          "
+        ></div>
+      </div>
+      <div class="action-buttons">
+        <button class="down-button">
+          <i class="fas fa-light fa-arrow-down"></i>
+        </button>
+        <button class="up-button">
+          <i class="fas fa-light fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2023 Seville Website. All rights reserved.</p>
+    </footer>
+
+    <script src="../js/history.js"></script>
+    <script src="../js/menu.js"></script>
+  </body>
+</html>
