@@ -24,7 +24,5 @@ Seville Website is a visually stunning website that invites users to embark on a
 2. Open the `index.html` file in your preferred web browser.
 3. Explore the charm of Seville through the various sections and interactive features.
 
-Feel free to contribute or provide feedback to make Seville Website even more captivating!
-
 Repository Link: [Seville Website Repository](https://github.com/pauruigar6/WebDesign.git)
 
